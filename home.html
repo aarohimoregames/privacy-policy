@@ -1,166 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Island Survival – Adventure & Crafting Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Island Survival – Explore, Craft & Survive</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Island Survival is an adventure survival game where you explore islands, gather resources, craft items, and survive in the wild. Available on Google Play.">
-    <meta name="keywords" content="Island Survival, survival game, android game, crafting game, adventure game">
-    <meta name="author" content="Aarohi Studio">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Island Survival is an Android adventure survival game. Explore islands, gather resources, craft tools, and survive the wild.">
+<meta name="author" content="Aarohi Studio">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f7fa;
-            color: #333;
-        }
+<!-- Open Graph -->
+<meta property="og:title" content="Island Survival – Android Survival Game">
+<meta property="og:description" content="Explore islands, craft tools, and survive the wild.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="screenshot1.jpg">
 
-        header {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
-            color: #fff;
-            padding: 50px 20px;
-            text-align: center;
-        }
+<style>
+:root {
+    --green: #2ecc71;
+    --dark: #1f2933;
+    --light: #f5f7fa;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        header p {
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: #333;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 20px;
-        }
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1abc9c, #27ae60);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 14px 22px;
-            margin-top: 20px;
-            background: #27ae60;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-        }
+.hero h1 {
+    font-size: 2.6em;
+    margin: 0;
+}
 
-        .btn:hover {
-            background: #219150;
-        }
+.hero p {
+    margin-top: 15px;
+    font-size: 1.15em;
+}
 
-        section {
-            margin-bottom: 50px;
-        }
+.hero a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 26px;
+    background: #0b6623;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
-        h2 {
-            color: #222;
-            margin-bottom: 15px;
-        }
+/* SECTIONS */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
 
-        .features ul {
-            list-style: none;
-            padding: 0;
-        }
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .features li {
-            padding: 10px 0;
-        }
+.section-title h2 {
+    margin: 0;
+    font-size: 2em;
+}
 
-        .screenshots img {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px;
-            border-radius: 10px;
-        }
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
 
-        footer {
-            background: #222;
-            color: #ccc;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
+.feature-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
 
-        footer a {
-            color: #1abc9c;
-            text-decoration: none;
-        }
+.feature-card h3 {
+    margin-top: 0;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-        }
-    </style>
+/* SCREENSHOTS */
+.screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.screenshots img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta {
+    background: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 28px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: #ccc;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
     <h1>Island Survival</h1>
-    <p>Explore • Craft • Survive</p>
+    <p>Explore islands • Gather resources • Craft & survive</p>
 
-    <!-- Replace # with your Play Store link -->
-    <a class="btn" href="#" target="_blank">Download on Google Play</a>
-</header>
+    <!-- Replace with Play Store link -->
+    <a href="#" target="_blank">Download on Google Play</a>
+</section>
 
-<div class="container">
-
-    <section>
+<!-- ABOUT -->
+<section class="container">
+    <div class="section-title">
         <h2>About the Game</h2>
-        <p>
-            Island Survival is an adventure survival game where you are stranded on mysterious islands.
-            Gather resources, craft tools, explore new areas, and survive the wild.
-        </p>
-    </section>
+    </div>
 
-    <section class="features">
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Island Survival is a survival adventure game where you explore mysterious islands,
+        collect wood and stones, craft useful items, and survive in the wild.
+        Build your way forward and uncover new islands to explore.
+    </p>
+</section>
+
+<!-- FEATURES -->
+<section class="container">
+    <div class="section-title">
         <h2>Game Features</h2>
-        <ul>
-            <li>🌴 Open island exploration</li>
-            <li>🪓 Resource gathering and crafting</li>
-            <li>🏕️ Survival mechanics</li>
-            <li>🏝️ Multiple islands to explore</li>
-            <li>🎮 Smooth and simple controls</li>
-        </ul>
-    </section>
+    </div>
 
-    <section class="screenshots">
+    <div class="features">
+        <div class="feature-card">
+            <h3>🌴 Island Exploration</h3>
+            <p>Explore beautiful islands filled with resources and hidden challenges.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🪓 Crafting System</h3>
+            <p>Collect wood, stones, and materials to craft useful tools and items.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🏝 Multiple Islands</h3>
+            <p>Travel between different islands, each with unique environments.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🎮 Simple Controls</h3>
+            <p>Easy-to-learn controls designed for smooth mobile gameplay.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="container">
+    <div class="section-title">
         <h2>Screenshots</h2>
+    </div>
 
-        <!-- Replace image paths with your own screenshots -->
-        <img src="screenshot1.jpg" alt="Island Survival Screenshot 1">
-        <img src="screenshot2.jpg" alt="Island Survival Screenshot 2">
-        <img src="screenshot3.jpg" alt="Island Survival Screenshot 3">
-    </section>
+    <div class="screenshots">
+        <img src="screenshot1.jpg" alt="Island Survival gameplay">
+        <img src="screenshot2.jpg" alt="Crafting system">
+        <img src="screenshot3.jpg" alt="Island exploration">
+    </div>
+</section>
 
-    <section>
-        <h2>Developer</h2>
-        <p>
-            Developed by <strong>Aarohi Studio</strong><br>
-            Contact: <a href="mailto:aarohimoregames@gmail.com">aarohimoregames@gmail.com</a>
-        </p>
-    </section>
+<!-- CTA -->
+<section class="container">
+    <div class="cta">
+        <h2>Start Your Survival Journey</h2>
+        <p>Download Island Survival now and explore the unknown.</p>
 
-    <section>
-        <h2>Legal</h2>
-        <p>
-            <a href="privacy.html">Privacy Policy</a>
-        </p>
-    </section>
+        <!-- Replace with Play Store link -->
+        <a href="#" target="_blank">Get it on Google Play</a>
+    </div>
+</section>
 
-</div>
-
+<!-- FOOTER -->
 <footer>
-    © 2025 Aarohi Studio · Island Survival
+    © 2025 Aarohi Studio · Island Survival <br>
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="mailto:aarohimoregames@gmail.com">Contact</a>
 </footer>
 
 </body>
